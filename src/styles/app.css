@@ -262,6 +262,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease;
+  will-change: transform;
+}
+
+.top-header.header-hidden {
+  transform: translateY(-115%);
+  pointer-events: none;
 }
 
 [data-theme="dark"] .top-header {

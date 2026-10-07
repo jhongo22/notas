@@ -81,7 +81,7 @@ export const DesktopSidebar: React.FC = () => {
           <div className="sidebar-avatar">J</div>
           <div>
             <h2 className="sidebar-name">Jhongo</h2>
-            <p className="sidebar-sub">Kairós Workspace</p>
+            <p className="sidebar-sub">Kairos Workspace</p>
           </div>
         </div>
 
