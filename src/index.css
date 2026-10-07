@@ -1,0 +1,8 @@
+/* Clean entry point for styles */
+@import './styles/variables.css';
+@import './styles/app.css';
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}

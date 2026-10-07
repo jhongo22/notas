@@ -1,0 +1,42 @@
+{
+  "name": "Kairós | Segundo Cerebro & Notas",
+  "short_name": "Kairós",
+  "description": "Tu espacio personal de notas, tareas tipo Taskade, calendario y microfinanzas con IA",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#090d16",
+  "theme_color": "#090d16",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Nueva Tarea",
+      "url": "/?action=new-task",
+      "description": "Añadir una tarea a tu bloc activo"
+    },
+    {
+      "name": "Registrar Gasto",
+      "url": "/?action=new-expense",
+      "description": "Registrar un gasto rápido con IA"
+    },
+    {
+      "name": "Ver Calendario",
+      "url": "/?action=calendar",
+      "description": "Consultar tus parciales y eventos"
+    }
+  ],
+  "categories": ["productivity", "finance", "utilities"]
+}

@@ -1,0 +1,219 @@
+import { Project, TaskItem, CalendarEvent, FinanceTransaction, AgentMessage } from '../types';
+
+export const INITIAL_PROJECTS: Project[] = [
+  {
+    id: 'proj-uni',
+    title: 'Universidad & Parciales',
+    icon: 'GraduationCap',
+    color: '#38bdf8',
+    description: 'Semestre activo, parciales, entregas y talleres'
+  },
+  {
+    id: 'proj-daily',
+    title: 'Día a Día & Urgencias',
+    icon: 'CheckSquare',
+    color: '#34d399',
+    description: 'Cosas que no se pueden olvidar hoy'
+  },
+  {
+    id: 'proj-personal',
+    title: 'Proyectos & Metas',
+    icon: 'Flame',
+    color: '#fbbf24',
+    description: 'Ideas de software, portafolio y negocios'
+  },
+  {
+    id: 'proj-ideas',
+    title: 'Bloc Rápido & Notas',
+    icon: 'Sparkles',
+    color: '#c084fc',
+    description: 'Pensamientos sueltos y referencias'
+  }
+];
+
+export const INITIAL_TASKS: TaskItem[] = [
+  {
+    id: 't-1',
+    projectId: 'proj-uni',
+    text: 'Estudiar para el Parcial de Matemáticas (Límites y Derivadas)',
+    completed: false,
+    priority: 'high',
+    dueDate: '2026-10-07',
+    dueTime: '08:00',
+    tags: ['Universidad', 'Examen'],
+    subtasks: [
+      { id: 'st-1', text: 'Repasar ejercicios del taller 3 y 4', completed: true },
+      { id: 'st-2', text: 'Ver video explicativo de regla de la cadena', completed: true },
+      { id: 'st-3', text: 'Hacer formulario resumen para estudiar', completed: false }
+    ],
+    createdAt: '2026-10-05T10:00:00Z'
+  },
+  {
+    id: 't-2',
+    projectId: 'proj-uni',
+    text: 'Enviar Taller de Física en PDF antes de medianoche',
+    completed: false,
+    priority: 'high',
+    dueDate: '2026-10-09',
+    dueTime: '23:59',
+    tags: ['Universidad', 'Entrega'],
+    subtasks: [
+      { id: 'st-4', text: 'Escanear hojas de desarrollo', completed: false },
+      { id: 'st-5', text: 'Revisar portada con nombres del grupo', completed: false }
+    ],
+    createdAt: '2026-10-06T14:30:00Z'
+  },
+  {
+    id: 't-3',
+    projectId: 'proj-daily',
+    text: 'Comprar cartulina y marcadores para la maqueta',
+    completed: false,
+    priority: 'medium',
+    dueDate: '2026-10-07',
+    tags: ['Compras', 'Papelería'],
+    subtasks: [],
+    createdAt: '2026-10-07T08:15:00Z'
+  },
+  {
+    id: 't-4',
+    projectId: 'proj-daily',
+    text: 'Pagar servicio de internet antes de la fecha de corte',
+    completed: true,
+    priority: 'medium',
+    dueDate: '2026-10-06',
+    tags: ['Finanzas', 'Casa'],
+    subtasks: [],
+    createdAt: '2026-10-05T09:00:00Z'
+  },
+  {
+    id: 't-5',
+    projectId: 'proj-personal',
+    text: 'Pulir diseño de la app Kairós con estilo HyperOS/iOS',
+    completed: false,
+    priority: 'high',
+    dueDate: '2026-10-08',
+    tags: ['Desarrollo', 'UI/UX'],
+    subtasks: [
+      { id: 'st-6', text: 'Bottom navigation bar flotante con glassmorphism', completed: true },
+      { id: 'st-7', text: 'Micro-interacciones y vibración haptic', completed: false },
+      { id: 'st-8', text: 'Parser de lenguaje natural para gastos rápidos', completed: false }
+    ],
+    createdAt: '2026-10-07T11:00:00Z'
+  },
+  {
+    id: 't-6',
+    projectId: 'proj-ideas',
+    text: 'Investigar integración con bot de Telegram para notas por voz',
+    completed: false,
+    priority: 'low',
+    tags: ['Ideas', 'Automatización'],
+    subtasks: [],
+    createdAt: '2026-10-06T18:00:00Z'
+  }
+];
+
+export const INITIAL_EVENTS: CalendarEvent[] = [
+  {
+    id: 'ev-1',
+    title: 'Parcial de Matemáticas - Aula 302',
+    date: '2026-10-07',
+    time: '08:00',
+    category: 'exam',
+    location: 'Edificio de Ingeniería Aula 302',
+    reminderMinutes: 60
+  },
+  {
+    id: 'ev-2',
+    title: 'Entrega Final Taller de Física',
+    date: '2026-10-09',
+    time: '23:59',
+    category: 'assignment',
+    location: 'Plataforma Virtual'
+  },
+  {
+    id: 'ev-3',
+    title: 'Revisión con el Tutor del Proyecto',
+    date: '2026-10-10',
+    time: '10:30',
+    category: 'meeting',
+    location: 'Google Meet'
+  },
+  {
+    id: 'ev-4',
+    title: 'Cita Odontológica / Control',
+    date: '2026-10-12',
+    time: '15:30',
+    category: 'personal',
+    location: 'Clínica Dental San Lucas',
+    reminderMinutes: 120
+  },
+  {
+    id: 'ev-5',
+    title: 'Parcial de Algoritmos y Estructuras',
+    date: '2026-10-14',
+    time: '14:00',
+    category: 'exam',
+    location: 'Laboratorio 4'
+  }
+];
+
+export const INITIAL_TRANSACTIONS: FinanceTransaction[] = [
+  {
+    id: 'fn-1',
+    amount: -3000,
+    description: 'Gaseosa Postobón Manzana fría',
+    category: 'comida',
+    date: '2026-10-07',
+    type: 'expense'
+  },
+  {
+    id: 'fn-2',
+    amount: -14500,
+    description: 'Almuerzo Ejecutivo Universitario',
+    category: 'comida',
+    date: '2026-10-07',
+    type: 'expense'
+  },
+  {
+    id: 'fn-3',
+    amount: -6500,
+    description: 'Pasajes bus ida y vuelta',
+    category: 'transporte',
+    date: '2026-10-07',
+    type: 'expense'
+  },
+  {
+    id: 'fn-4',
+    amount: -45000,
+    description: 'Fotocopias y Libro de Cálculo Diferencial',
+    category: 'universidad',
+    date: '2026-10-06',
+    type: 'expense'
+  },
+  {
+    id: 'fn-5',
+    amount: 520000,
+    description: 'Transferencia freelance frontend web',
+    category: 'ingresos',
+    date: '2026-10-05',
+    type: 'income'
+  },
+  {
+    id: 'fn-6',
+    amount: -22000,
+    description: 'Combo Cine + Boleta con amigos',
+    category: 'ocio',
+    date: '2026-10-04',
+    type: 'expense'
+  },
+  {
+    id: 'fn-7',
+    amount: -3500,
+    description: 'Café y empanada de queso',
+    category: 'comida',
+    date: '2026-10-04',
+    type: 'expense'
+  }
+];
+
+export const INITIAL_MESSAGES: AgentMessage[] = [];

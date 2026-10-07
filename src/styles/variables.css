@@ -1,0 +1,88 @@
+/* iOS Human Interface Guidelines - System Palette (Light Mode by Default) */
+:root {
+  /* iOS Light Mode (Default) */
+  --bg-app: #f2f2f7;                   /* systemGroupedBackground */
+  --bg-surface: #ffffff;               /* secondarySystemGroupedBackground */
+  --bg-surface-elevated: #ffffff;      /* tertiarySystemGroupedBackground */
+  --bg-fill: #e5e5ea;                  /* systemFill */
+  --bg-grouped: #ffffff;
+  --bg-sidebar: #f8f8fa;
+
+  /* Separators & Hairline Borders */
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-divider: #e5e5ea;
+  --border-focus: #007aff;
+
+  /* Apple System Accent Colors (Light Mode) */
+  --system-blue: #007aff;
+  --system-yellow: #ffcc00;
+  --system-orange: #ff9500;
+  --system-green: #34c759;
+  --system-red: #ff3b30;
+  --system-purple: #af52de;
+  --system-teal: #5ac8fa;
+  --system-gray: #8e8e93;
+
+  /* Active Accents */
+  --accent-primary: #007aff;
+  --accent-notes: #ffcc00;
+
+  /* Typography Colors (Light Mode) */
+  --text-primary: #000000;
+  --text-secondary: #6c6c70;
+  --text-tertiary: #8e8e93;
+  --text-quaternary: #c7c7cc;
+
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", sans-serif;
+  --font-mono: -apple-system-ui-monospaced, "SF Mono", Menlo, monospace;
+
+  /* Corner Radii */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 18px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-float: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+
+  /* Safe areas */
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+}
+
+/* Dark Mode (Toggleable) */
+[data-theme="dark"] {
+  --bg-app: #000000;
+  --bg-surface: #1c1c1e;
+  --bg-surface-elevated: #2c2c2e;
+  --bg-fill: #3a3a3c;
+  --bg-grouped: #1c1c1e;
+  --bg-sidebar: #121214;
+
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-divider: #38383a;
+  --border-focus: #0a84ff;
+
+  --system-blue: #0a84ff;
+  --system-yellow: #ffd60a;
+  --system-orange: #ff9f0a;
+  --system-green: #30d158;
+  --system-red: #ff453a;
+  --system-purple: #bf5af2;
+  --system-teal: #64d2ff;
+  --system-gray: #8e8e93;
+
+  --accent-primary: #0a84ff;
+  --accent-notes: #ffd60a;
+
+  --text-primary: #ffffff;
+  --text-secondary: #8e8e93;
+  --text-tertiary: #636366;
+  --text-quaternary: #48484a;
+
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-float: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
